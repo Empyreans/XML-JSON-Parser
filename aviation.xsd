@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- flight simple elements -->
+    <xs:element name="departure-date" type="xs:date"/>
+    <xs:element name="departure-time" type="xs:time"/>
+    <xs:element name="departure-point" type="xs:string"/>
+    <xs:element name="destination" type="xs:string"/>
+    <xs:element name="price" type="xs:double"/>
+
+    <!-- passenger simple elements -->
+    <xs:element name="first-name" type="xs:string"/>
+    <xs:element name="last-name" type="xs:string"/>
+    <xs:element name="canceled" type="xs:boolean" default="false"/>
+
+    <!-- definition of attributes -->
+    <xs:attribute name="flightID" type="xs:integer"/>
+
+    <!-- definition of complex elements -->
+    <xs:element name="passenger">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="first-name"/>
+                <xs:element ref="last-name"/>
+                <xs:element ref="canceled"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="flight">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="departure-date"/>
+                <xs:element ref="departure-time"/>
+                <xs:element ref="departure-point"/>
+                <xs:element ref="destination"/>
+                <xs:element ref="price"/>
+                <xs:element ref="passenger" maxOccurs="unbounded" minOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute ref="flightID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="flights">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="flight" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
