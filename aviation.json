@@ -1,21 +1,68 @@
-{
-  "departure-date":"2012-12-13",
-  "departure-time":"12:12",
-  "departure-point":"Berlin",
-  "destination":"Moskau",
-  "price":332.99,
-  "passenger": [
+[
+  {
+    "departure-date":"2014-12-13",
+    "departure-time":"12:12",
+    "departure-point":"Berlin",
+    "destination":"Moskau",
+    "price":332.99,
+    "passenger": [
 
-    {
-      "first-name":"Leon",
-      "last-name": "Adelberg",
-      "canceled": "false"
-    },
+      {
+        "first-name":"Leon",
+        "last-name":"Adelberg",
+        "canceled":"false",
+        "address": {
+            "street":"Fanningerstr",
+            "number":"33",
+            "town":"Berlin",
+            "postalcode":"10365"
+        }
+      },
 
-    {
-      "first-name":"Max",
-      "last-name": "Regenberg",
-      "canceled": "false"
-    }
-  ]
-}
+      {
+        "first-name":"Max",
+        "last-name": "Regenberg",
+        "canceled": "false",
+        "address": {
+          "street":"Fanningerstr",
+          "number":"33",
+          "town":"Berlin",
+          "postalcode":"10365"
+        }
+      }
+    ]
+  },
+  {
+    "departure-date":"2022-12-13",
+    "departure-time":"12:12",
+    "departure-point":"Berlin",
+    "destination":"Moskau",
+    "price":333.99,
+    "passenger": [
+
+      {
+        "first-name":"Rudolf",
+        "last-name":"Adelberg",
+        "canceled":"false",
+        "address": {
+          "street":"Randomstreet",
+          "number":"33",
+          "town":"Berlin",
+          "postalcode":"10365"
+        }
+      },
+
+      {
+        "first-name":"Eberhart",
+        "last-name": "Regenberg",
+        "canceled": "false",
+        "address": {
+          "street":"Randomstreet",
+          "number":"33",
+          "town":"Berlin",
+          "postalcode":"10365"
+        }
+      }
+    ]
+  }
+]

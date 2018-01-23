@@ -1,4 +1,4 @@
-/**
+package XMLParser; /**
  * Created by Empyreans on 22.12.2017.
  */
 
